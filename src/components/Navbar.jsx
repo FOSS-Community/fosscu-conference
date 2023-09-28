@@ -152,9 +152,9 @@ const Navbar = () => {
           </ul>
           <div onClick={handleNav} className="block cursor-pointer md:hidden">
             {nav ? (
-              <AiOutlineClose fill="#000000" size={20} />
+              <AiOutlineClose  className=" fill-current text-white" size={20} />
             ) : (
-              <AiOutlineMenu fill="#000000" size={20} />
+              <AiOutlineMenu  className=" fill-current text-white" size={20} />
             )}
           </div>
           <div
