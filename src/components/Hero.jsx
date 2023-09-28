@@ -1,8 +1,10 @@
 import React from "react";
-import delhi from "../assets/herobg.png";
+import bgImg from "../assets/second.jpg";
 import { useLottie } from "lottie-react";
+import { useSpring, animated } from "react-spring";
 import "@lottiefiles/lottie-player";
-import animationData from "../lotties/LottieAnimation.json";
+import animationData from "../lotties/animate.json";
+import { FaChevronDown } from "react-icons/fa"; // Import the scroll-down icon
 
 const Hero = () => {
   const options = {
@@ -12,27 +14,70 @@ const Hero = () => {
 
   const { View } = useLottie(options);
 
-  return (
-    <div>
-      <img
-        src={delhi}
-        className="w-[100%] cursor-grab h-auto sm:h-[30rem] md:h-[36rem] "
-        alt=""
-      />
+  const fadeIn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1000 },
+  });
 
-      <section className="">
-        <div className="flex  justify-between sm:justify-start">
-          <div className="mr-auto pt-6  sm:pt-12 sm:mx-[3.2REM] mx-4 place-self-center lg:col-span-7">
-            <h1 className="text-3xl cursor-grab font-Montserrat font-extrabold tracking-tight leading-none sm:text-5xl md:text-6xl ">
-              PY<spand>DELHI</spand> CONFERENCE
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
+    }
+  };
+
+  return (
+    <div
+      className="bg-[#000300] h-[94vh] flex items-center relative" 
+      style={{
+        backgroundImage: `url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col justify-center items-center text-center h-full">
+          {" "}
+          {/* Centered content vertically */}
+          <animated.div className="w-full  z-10 cursor-grab" style={fadeIn}>
+            <h1 className="text-3xl sm:text-6xl md:text-7xl font-Montserrat font-extrabold tracking-tight leading-none mb-4 text-black">
+              <span className="bubble-animation">
+                <animated.span className="bubble-animation-up">F</animated.span>
+                <animated.span className="bubble-animation-down">
+                  O
+                </animated.span>
+                <animated.span className="bubble-animation-up">S</animated.span>
+                <animated.span className="bubble-animation-down">
+                  S
+                </animated.span>
+                <animated.span className="bubble-animation-up">C</animated.span>
+                <animated.span className="bubble-animation-down">
+                  U
+                </animated.span>
+              </span>
+              <span> CONFERENCE 2023</span> {/* Added conference year */}
             </h1>
-            <p className="text-sm cursor-grab font-sans sm:text-lg tracking-tight font-medium sm:tracking-wider">
-              CONFERENCE ON PYTHON PROGRAMMING LANGUAGE
+            <p className="text-xl sm:text-2xl font-Montserrat font-semibold  text-black tracking-wider ">
+              EXPLORING THE WORLD OF OPEN SOURCE: JOIN OUR CONFERENCE TODAY!
             </p>
+          </animated.div>
+          <div
+            className="mt-4 text-center z-20 cursor-pointer"
+            onClick={() => scrollToSection("about")}
+          >
+            {" "}
+            {/* Centered and added margin for scroll-down indicator */}
+            <FaChevronDown className="text-black  text-4xl animate-bounce" />
           </div>
-          <div className="lg:w-52 cursor-grab md:w-44 sm:w-40 w-28">{View}</div>
+          <div className="w-full absolute bottom-0 right-0 left-0 text-center">
+            {" "}
+            {/* Positioned animation at the bottom */}
+            {View}
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

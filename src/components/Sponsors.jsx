@@ -7,11 +7,11 @@ const Sponsors = () => {
       {" "}
       <div className=" mx-auto container text-none sm:text-center">
         {" "}
-        <p className="mt-4  sm:text-3xl text-2xl lg:text-4xl text-center font-Montserrat text-[#212A5C] font-extrabold tracking-tight">
+        <p className="mt-4  sm:text-3xl text-2xl lg:text-4xl text-center font-Montserrat text-[#0dff1c] font-extrabold tracking-tight">
           {" "}
           Proudly Sponsored By
         </p>
-        <p className="py-6 text-justify lg:text-center font-Roboto text-black font-medium  sm:text-lg ">
+        <p className="py-6 text-justify lg:text-center font-Roboto  font-medium  sm:text-lg ">
           {" "}
           As a sponsor for the conference, you can avail and enable a platform
           to showcase your product or service to a wide range of technology
@@ -21,7 +21,7 @@ const Sponsors = () => {
           <span className="font-semibold  text-[#5DB363]">
             <a
             target="blank"
-              href="https://conference.pydelhi.org/data/SponsorshipProspectus2023.pdf"
+              href=""
               className="hover:text-green-500"
             >
               {" "}

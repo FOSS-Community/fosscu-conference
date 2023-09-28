@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import logo from "../assets/logo.png";
+import logo from "../assets/fosscu.png";
 
 const Navbar = () => {
   const scrollToSection = (sectionId) => {
@@ -48,15 +48,16 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`sticky z-20 top-0 w-[100%] bg-white ${
+        className={`sticky z-20 top-0 w-[100%] bg-[#000300] ${
           isSticky ? "shadow-lg  " : ""
         }`}
       >
-        <div className="flex justify-between items-center h-[4.8rem] max-w-[1240px] mx-auto px-4 text-white">
-          <a href="#">
-            <img src={logo} className="w-44" alt="" />
+        <div className="flex justify-between items-center h-[4.8rem] max-w-[1240px] mx-auto px-4 ">
+          <a href="#" className="flex justify-center items-center">
+            <img src={logo} className="w-14" alt="" />
+            <h1 className="pl-2 text-2xl font-bold">FOSSCU</h1>
           </a>
-          <ul className="hidden text-black -mt-2 md:flex">
+          <ul className="hidden  -mt-2 md:flex">
             <li
               onClick={() => scrollToSection("home")}
               className={`m-4 hover:text-[#5db363] font-medium cursor-pointer ${
@@ -93,7 +94,7 @@ const Navbar = () => {
 
             <li className="m-4 hover:text-[#5db363]  font-medium cursor-pointer">
               <div className="relative group  xl:mr-0 lg:mr-44 md:mr-36">
-                <button className=" pb-0 hover:text-[#5db363] flex items-center  text-black">
+                <button className=" pb-0 hover:text-[#5db363] flex items-center  ">
                   <span className="mr-1">
                     {" "}
                     <svg
@@ -112,10 +113,10 @@ const Navbar = () => {
                   </span>
                   <span>More</span>
                 </button>
-                <div className="translate-x-[-0em] shadow-sm hidden absolute bg-white text-black rounded mt-1 w-56 group-hover:block hover:rounded-md ">
+                <div className="translate-x-[-0em] text-white shadow-sm hidden absolute bg-[#000300]  rounded mt-1 w-56 group-hover:block hover:rounded-md ">
                   <li
                     onClick={() => scrollToSection("faq")}
-                    className={`m-4 hover:text-[#5db363]  font-medium cursor-pointer ${
+                    className={`m-4 hover:text-[#5db363]   font-medium cursor-pointer ${
                       activeSection === "faq" ? "text-[#5db363]" : ""
                     }`}
                   >
@@ -151,15 +152,15 @@ const Navbar = () => {
           </ul>
           <div onClick={handleNav} className="block cursor-pointer md:hidden">
             {nav ? (
-              <AiOutlineClose fill="#000000" size={20} />
+              <AiOutlineClose  className=" fill-current text-white" size={20} />
             ) : (
-              <AiOutlineMenu fill="#000000" size={20} />
+              <AiOutlineMenu  className=" fill-current text-white" size={20} />
             )}
           </div>
           <div
             className={
               nav
-                ? "fixed z-30 left-0 top-0 pt-4 w-[60%] h-full border-r border-r-grey-900 bg-white ease-in-out duration-500 "
+                ? "fixed z-30 left-0 top-0 pt-4 w-[60%] h-full border-r border-r-grey-900 bg-[#000300] ease-in-out duration-500 "
                 : "fixed left-[-100%]"
             }
           >
@@ -169,7 +170,7 @@ const Navbar = () => {
             <ul className="uppercase p-4">
               <li
                 onClick={() => scrollToSection("home")}
-                className={`p-4 text-black   border-b border-gray-600 ${
+                className={`p-4    border-b border-gray-600 ${
                   activeSection === "home" ? "text-[#5db363]" : ""
                 }`}
               >
@@ -177,7 +178,7 @@ const Navbar = () => {
               </li>
               <li
                 onClick={() => scrollToSection("about")}
-                className={`p-4 text-black   border-b border-gray-600 ${
+                className={`p-4    border-b border-gray-600 ${
                   activeSection === "about" ? "text-[#5db363]" : ""
                 }`}
               >
@@ -185,7 +186,7 @@ const Navbar = () => {
               </li>
               <li
                 onClick={() => scrollToSection("register")}
-                className={`p-4 text-black   border-b border-gray-600 ${
+                className={`p-4    border-b border-gray-600 ${
                   activeSection === "register" ? "text-[#5db363]" : ""
                 }`}
               >
@@ -193,7 +194,7 @@ const Navbar = () => {
               </li>
               <li
                 onClick={() => scrollToSection("schedule")}
-                className={`p-4 text-black   border-b border-gray-600 ${
+                className={`p-4    border-b border-gray-600 ${
                   activeSection === "schedule" ? "text-[#5db363]" : ""
                 }`}
               >
@@ -201,7 +202,7 @@ const Navbar = () => {
               </li>
               <li
                 onClick={() => scrollToSection("faq")}
-                className={`p-4 text-black   border-b border-gray-600 ${
+                className={`p-4    border-b border-gray-600 ${
                   activeSection === "faq" ? "text-[#5db363]" : ""
                 }`}
               >
@@ -209,7 +210,7 @@ const Navbar = () => {
               </li>
               <li
                 onClick={() => scrollToSection("code")}
-                className={`p-4 text-black   border-b border-gray-600 ${
+                className={`p-4    border-b border-gray-600 ${
                   activeSection === "code" ? "text-[#5db363]" : ""
                 }`}
               >
@@ -217,7 +218,7 @@ const Navbar = () => {
               </li>
               <li
                 onClick={() => scrollToSection("community")}
-                className={`p-4 text-black   border-b border-gray-600 ${
+                className={`p-4    border-b border-gray-600 ${
                   activeSection === "community" ? "text-[#5db363]" : ""
                 }`}
               >
@@ -226,7 +227,7 @@ const Navbar = () => {
 
               <li
                 onClick={() => scrollToSection("sponsor")}
-                className={`p-4 text-black   border-b border-gray-600 ${
+                className={`p-4    border-b border-gray-600 ${
                   activeSection === "sponsor" ? "text-[#5db363]" : ""
                 }`}
               >
