@@ -1,34 +1,32 @@
 import temp from "../assets/temp.png";
 
-const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
+const Code = () => {
   return (
     <div>
       <div id="code" className={`   container pt-12 xl:pt-20 mx-auto p-4 `}>
-        <h1 className="sm:text-4xl  mb-8 text-[#212A5C] font-extrabold font-Montserrat tracking-tight  text-center text-2xl ">
-          PyDelhiConf Code of Conduct
+        <h1 className="sm:text-4xl  mb-8 text-[#0dff1c] font-extrabold font-Montserrat tracking-tight  text-center text-2xl ">
+          FOSSCU Code of Conduct
         </h1>
         <p className="mb-4  text-md sm:text-lg text-justify font-Roboto font-medium">
-          PyDelhiConf is a community organized conference intended for
-          advocating the use and adoption of the Python programming language in
-          India. It is also a platform for fostering networking and
-          collaboration among the Python developer community in India. We value
-          the participation of every member of the Python community and want all
-          attendees to have an enjoyable and rewarding experience. Accordingly,
-          every attendee of the conference is expected to show respect and
-          courtesy to every other attendee throughout the conference and at all
-          conference related events, whether officially organized by PSSI or
-          not. To make clear what is expected, all delegates/attendees,
-          speakers, exhibitors, organizers and volunteers at PyDelhiConf are
-          required to conform to the following Code of Conduct. Organizers will
-          enforce this code throughout the event.
+          FOSSCUConf is a community-organized conference aimed at promoting the
+          use and advancement of open-source technologies in the global tech
+          ecosystem. It serves as a platform for fostering connections and
+          collaboration among open-source enthusiasts and developers worldwide.
+          We highly value the active participation of every member within the
+          open-source community and strive to ensure that all attendees enjoy a
+          respectful and rewarding experience. Consequently, we expect every
+          participant, including delegates/attendees, speakers, sponsors,
+          organizers, and volunteers at FOSSCUConf, to adhere to the following
+          Code of Conduct. The organizers are committed to upholding this code
+          throughout the entire event.
         </p>
         <div className="">
-          <div className="code-of-conduct bg-[#dfe4ef] border border-gray-300 p-6 mb-6">
-            <h2 className="text-2xl font-bold font-Montserrat mb-4 bg-[#dfe4ef]  text-[#212A5C]">
+          <div className="code-of-conduct  border border-gray-300 p-6 mb-6">
+            <h2 className="text-2xl font-bold font-Montserrat mb-4   text-[#0dff1c]">
               Code of Conduct
             </h2>
-            <div className="flex flex-row justify-between bg-[#dfe4ef]">
-              <div className="bg-[#dfe4ef] font-Roboto w-[90%]">
+            <div className="flex flex-row justify-between ">
+              <div className=" font-Roboto w-[90%]">
                 <p className="conducts-items">
                   1. Respect and courtesy: Treat others with respect and
                   courtesy.
@@ -49,14 +47,14 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
                   4. Harassment: Harassment of any kind will not be tolerated.
                 </p>
               </div>
-              <div className="bg-[#dfe4ef] w-50px hidden sm:block">
-                <img src={temp} className=" bg-[#dfe4ef]" alt="" />
+              <div className=" w-50px hidden sm:block">
+                <img src={temp} className=" " alt="" />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex gap-2">
+        {/* <div className="flex gap-2">
           <button
             onClick={() => handleShortCoc(true)}
             className="conducts-button"
@@ -71,9 +69,9 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
           >
             Long Version
           </button>
-        </div>
+        </div> */}
       </div>
-      <div
+      {/* <div
         className={`fixed ${
           shortCoc ? "inset-0" : ""
         } bg-black bg-opacity-70 flex items-center justify-center z-50 overflow-hidden`}
@@ -87,9 +85,9 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
           } overflow-y-auto overflow-x-hidden flex justify-center mt-32 h-full`}
         >
           <div className="relative p-4 w-full max-w-[59rem] md:h-auto">
-            <div className="relative p-4 bg-white rounded-lg shadow-lg sm:p-5">
+            <div className="relative p-4 bg-[#000300] rounded-lg shadow-lg sm:p-5">
               <div className="flex justify-between mb-4 rounded-t sm:mb-5">
-                <div className="text-sm text-black sm:text-md ">
+                <div className="text-sm  sm:text-md ">
                   <div
                     className="modal fade"
                     id="short-coc"
@@ -99,7 +97,7 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
                   >
                     <div className="modal-dialog max-h-[300px] overflow-y-scroll">
                       <div className="modal-content">
-                        <div className="modal-header absolute w-full overflow-hidden pt-6 left-0 border-b top-0 bg-white z-10">
+                        <div className="modal-header absolute w-full overflow-hidden pt-6 left-0 border-b top-0 bg-[#000300] z-10">
                           <div className="border-b pb-4 pr-12">
                             <h4 className="font-semibold  text-[#5DB363] text-xl  border-b border-gray-300 ml-4 ">
                               Short Version Code of Conduct
@@ -138,7 +136,9 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
                             clothing/uniforms/costumes, or otherwise create a
                             sexualized environment.
                           </p>
-                          <p className="font-semibold">Code for Participants:</p>
+                          <p className="font-semibold">
+                            Code for Participants:
+                          </p>
                           <p>
                             Be kind and sensitive to the people around you and
                             avoid any kind of offensive behavior. Sexist, racist
@@ -160,7 +160,7 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
                   <button
                     onClick={() => handleShortCoc(false)}
                     type="button"
-                    className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg  text-sm p-1.5 inline-flex "
+                    className=" bg-transparent hover:bg-gray-200 hover: rounded-lg  text-sm p-1.5 inline-flex "
                     data-modal-toggle="readProductModal"
                   >
                     <svg
@@ -186,7 +186,7 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
                 <button
                   onClick={() => handleShortCoc(false)}
                   type="button"
-                  className="inline-flex items-center text-white bg-[#5DB363] focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-sm px-5 py-2 text-center "
+                  className="inline-flex items-center  bg-[#5DB363] focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-sm px-5 py-2 text-center "
                 >
                   Close
                 </button>
@@ -209,9 +209,9 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
           } overflow-y-auto overflow-x-hidden flex justify-center mt-32 h-full`}
         >
           <div className="relative p-4 w-full max-w-[59rem] md:h-auto">
-            <div className="relative p-4 bg-white rounded-lg shadow-lg  sm:p-5">
+            <div className="relative p-4 bg-[#000300] rounded-lg shadow-lg  sm:p-5">
               <div className="flex justify-between mb-4 rounded-t sm:mb-5">
-                <div className="text-sm text-black sm:text-md ">
+                <div className="text-sm  sm:text-md ">
                   <div
                     className="modal fade"
                     id="short-coc"
@@ -221,7 +221,7 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
                   >
                     <div className="modal-dialog max-h-[300px] overflow-y-scroll">
                       <div className="modal-content">
-                        <div className="modal-header absolute w-full overflow-hidden pt-6 left-0 border-b top-0 bg-white z-10">
+                        <div className="modal-header absolute w-full overflow-hidden pt-6 left-0 border-b top-0 bg-[#000300] z-10">
                           <div className="border-b pb-4 pr-12">
                             <h4 className="font-semibold  text-[#5DB363] text-xl  border-b border-gray-300 ml-4 ">
                               Long Version Code of Conduct
@@ -333,7 +333,7 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
                   <button
                     onClick={() => handleLongCoc(false)}
                     type="button"
-                    className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg  text-sm p-1.5 inline-flex "
+                    className=" bg-transparent hover:bg-gray-200 hover: rounded-lg  text-sm p-1.5 inline-flex "
                     data-modal-toggle="readProductModal"
                   >
                     <svg
@@ -359,7 +359,7 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
                 <button
                   onClick={() => handleLongCoc(false)}
                   type="button"
-                  className="inline-flex items-center text-white bg-[#5DB363] focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-sm px-5 py-2 text-center"
+                  className="inline-flex items-center  bg-[#5DB363] focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-sm px-5 py-2 text-center"
                 >
                   Close
                 </button>
@@ -367,7 +367,7 @@ const Code = ({ handleShortCoc, handleLongCoc, shortCoc, longCoc }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

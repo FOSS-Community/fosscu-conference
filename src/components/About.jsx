@@ -27,13 +27,13 @@ const About = () => {
         title={label}
       >
         <div
-          className="z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          className="z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none "
           data-carousel-prev
         >
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-[#000300]/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-white  sm:w-6 sm:h-6 "
+              className="w-5 h-5   sm:w-6 sm:h-6 "
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -66,10 +66,10 @@ const About = () => {
           className="z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           data-carousel-next
         >
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
+          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-[#000300]/30  group-focus:ring-4 group-focus:ring-white  group-focus:outline-none">
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-white sm:w-6 sm:h-6"
+              className="w-5 h-5  sm:w-6 sm:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -111,9 +111,9 @@ const About = () => {
               ))}
             </Carousel>{" "}
           </div>
-          <div className="w-full bg-white border border-gray-200 rounded-lg shadow ">
+          <div className="w-full bg-[#000300] border border-gray-200 rounded-lg shadow ">
             <ul
-              className="text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex "
+              className="text-sm font-medium text-center  divide-x divide-gray-200 rounded-lg sm:flex "
               id="fullWidthTab"
               data-tabs-toggle="#fullWidthTabContent"
               role="tablist"
@@ -126,9 +126,9 @@ const About = () => {
                   role="tab"
                   aria-controls="stats"
                   aria-selected="true"
-                  className="inline-block w-full p-4 h-full font-semibold rounded-tl-lg bg-gray-50 hover:bg-gray-100 focus:outline-none"
+                  className="inline-block w-full p-4 h-full font-semibold rounded-tl-lg  hover: focus:outline-none"
                 >
-                  Date: 5th & 6th August
+                  Date: 26th November
                 </button>
               </li>
               <li className="w-full">
@@ -139,9 +139,9 @@ const About = () => {
                   role="tab"
                   aria-controls="about"
                   aria-selected="false"
-                  className="inline-block w-full p-4 h-full font-semibold bg-gray-50 hover:bg-gray-100 focus:outline-none "
+                  className="inline-block w-full p-4 h-full font-semibold  hover: focus:outline-none "
                 >
-                  Venue: IIT DELHI
+                  Venue: Soon..
                 </button>
               </li>
               <li className="w-full">
@@ -152,9 +152,9 @@ const About = () => {
                   role="tab"
                   aria-controls="faq"
                   aria-selected="false"
-                  className="inline-block w-full p-4 h-full rounded-tr-lg font-semibold bg-gray-50 hover:bg-gray-100 focus:outline-none "
+                  className="inline-block w-full p-4 h-full rounded-tr-lg font-semibold  hover: focus:outline-none "
                 >
-                  Speakers: CFP Live, ends June 1
+                  Speakers: CFP Live, ends 20th October
                 </button>
               </li>
             </ul>
@@ -163,27 +163,26 @@ const About = () => {
         <div className="flex justify-center items-center w-full  lg:w-[60%] p-2">
           <div className="flex flex-col justify-between w-full xl:ml-12 lg:px-8 xl:w-[70%]">
             <div className="flex flex-col items-center md:items-start">
-              <h3 className="text-center flex items-center md:text-left text-[#212A5C]  font-semibold text-2xl sm:text-3xl">
+              <h3 className="text-center flex items-center md:text-left text-[#0dff1c]  font-semibold text-2xl sm:text-3xl">
                 <span className="pr-1 font-Montserrat">
                   <img src={abouticon} className="w-7" alt="" />
                 </span>
                 ABOUT THE CONFERENCE
               </h3>
               <p className="font-Roboto text-justify text-md sm:text-lg lg:text-xl pt-2 font-gray-800">
-                The PyDelhi conference is hosted annually by the PyDelhi
-                Community with the aim of promoting the Python programming
-                language for all. We provide a single platform for programmers
-                from different domains and enthusiasts from various walks of
-                life, such as students, entrepreneurs, and professionals.
-                Startups, SMEs, and enterprises can also sponsor, connect,
-                showcase, and hire software professionals. Experts from various
-                domains demonstrate the application of <code>'Python'</code> as
-                a programming language, while discussions brew on recent and
-                upcoming technologies.
+                The FOSSCU Conference, organized annually by the FOSSCU
+                Community, stands as a testament to the unwavering dedication to
+                promoting open source technology and fostering collaboration
+                within the open-source community. This event provides a vibrant
+                and unifying platform that brings together programmers from
+                diverse backgrounds, including students taking their first steps
+                into the world of code, visionary entrepreneurs envisioning
+                innovative solutions, and seasoned professionals with a deep
+                commitment to open source principles.
               </p>
               <p className=" font-Roboto text-md sm:text-lg lg:text-xl pt-2 font-gray-800 mt-4 mb-2">
-                All participants are requested to follow the Code of Conduct,
-                and we will enforce it accordingly.
+                We kindly request all participants to adhere to our Code of
+                Conduct, which will be strictly enforced throughout the event.
               </p>
 
               <div className="flex flex-wrap sm:flex-wrap-none">
@@ -210,7 +209,8 @@ const About = () => {
                     <img src={submit} className="w-7" alt="" />
                   </div>
                   <a
-                    href="https://www.papercall.io/pydelhiconf2023"
+                    href=""
+                    className="cursor-grab"
                     target="blank"
                     rel="noopener noreferrer"
                   >
@@ -223,7 +223,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="mt-12 text-[#212A5C] bg-[#DFE4EF] flex justify-center items-center">
+      {/* <div className="mt-12 text-[#0dff1c] bg-[#DFE4EF] flex justify-center items-center">
         <div>
           <h1 className="text-xl font-Roboto  tracking- leading-none">
             Venue Partner :
@@ -240,7 +240,7 @@ const About = () => {
         >
           <img src={fitt} className="w-36 h-36" alt="" />
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };
