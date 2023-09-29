@@ -25,3 +25,9 @@ Additional commands:
 ```
 npm run lint
 ```
+
+**To Start the Application by Docker Run these Commands one by one**
+```
+1) docker pull shivamkumar28dec/foss-conference
+2) docker run -p 5173:5173 shivamkumar28dec/foss-conference
+```
