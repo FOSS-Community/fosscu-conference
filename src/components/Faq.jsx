@@ -10,53 +10,43 @@ const Faq = ({ data }) => {
   };
 
   return (
-    <section id="faq">
-      <div className="pt-4">
-        <div className=" px-4 sm:px-6 mx-auto max-w-screen-xl sm:pt-16 lg:px-20">
-          <div className="flex flex-row justify-center">
-            <h2 className="mb-8 text-2xl sm:text-3xl lg:text-4xl font-Montserrat tracking-tight font-extrabold text-[#0dff1c]">
-              Frequently asked questions
-            </h2>
-          </div>
-          <div className="sm:pt-4 pt-1 text-left font-Roboto border-t border-gray-200 md:gap-16  md:grid-cols-2">
-            {data.map((datas, index) => {
-              return (
-                <div className="sm:mb-4 mb-1 sm:pb-2 pb-1 border-b" key={index}>
-                  <div className="flex flex-row justify-between items-center">
-                    <h3 className="flex items-center sm:mb-4 mb-1 text-md sm:text-lg font-medium  ">
-                      <svg
-                        className="flex-shrink-0 mr-2 w-5 h-5  "
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                      {datas.question}
-                    </h3>
-                    <button onClick={() => toggleContent(index)}>
-                      <svg
-                        className={`w-8 -mt-6 h-8 ${
-                          isOpen[index] ? "transform rotate-180" : ""
-                        }`}
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path fillRule="evenodd" d="M10 15l5-5H5z" />
-                      </svg>
-                    </button>
-                  </div>
-                  {isOpen[index] && (
-                    <p className=" ">{datas.answer}</p>
-                  )}
+    <section id="faq" className=" text-white py-16 lg:py-24">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-extrabold leading-tight text-[#0dff1c] mb-8 text-center">
+          Frequently Asked Questions
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {data.map((datas, index) => {
+            return (
+              <div
+                key={index}
+                className="border rounded-lg p-4 hover:shadow-lg transition duration-300 bg-[#1F2937]"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-medium">
+                    {datas.question}
+                  </h3>
+                  <button onClick={() => toggleContent(index)}>
+                    <svg
+                      className={`w-6 h-6 transform transition-transform ${
+                        isOpen[index] ? "rotate-180" : ""
+                      }`}
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 15l5-5H5z"
+                      />
+                    </svg>
+                  </button>
                 </div>
-              );
-            })}
-          </div>
+                {isOpen[index] && (
+                  <p className="mt-4 text-gray-300">{datas.answer}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
