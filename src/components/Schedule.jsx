@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Schedule = () => {
+  const scheduleRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true, 
+    });
+  }, []);
+
   return (
     <div className="pt-8">
-      <section id="schedule" className="bg-[#000300] text-white antialiased">
+      <section
+        id="schedule"
+        className="bg-[#000300] text-white antialiased"
+        ref={scheduleRef}
+        data-aos="fade-up"
+      >
         <div className="max-w-screen-xl mx-auto py-16 lg:py-24">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-extrabold leading-tight text-[#0dff1c] tracking-tight">
