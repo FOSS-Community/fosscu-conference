@@ -17,6 +17,7 @@ const About = () => {
       once: true,
     });
   }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
