@@ -6,9 +6,17 @@ import register from "../assets/register.png";
 import schedule from "../assets/schedule.png";
 import submit from "../assets/submit.png";
 import imgData from "../data/imgData.json";
-import fitt from "../assets/fitt.png";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true, 
+    });
+  }, []);
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -89,10 +97,10 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="pt-12 xl:pt-36  ">
+    <section id="about" className="pt-12 xl:pt-36">
       <div className=" flex flex-col-reverse px-4 lg:flex-row items-center justify-center w-full  mx-auto">
-        <div className="lg:w-[600px] md:w-[800px] mx-2 lg:pt-0 pt-10">
-          <div className="shadow-lg  rounded ">
+        <div className="lg:w-[600px] md:w-[800px] mx-2 lg:pt-0 pt-10" data-aos="fade-right">
+          <div className="shadow-lg  rounded " >
             <Carousel
               showThumbs={false}
               autoPlay={true}
@@ -160,7 +168,7 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <div className="flex justify-center items-center w-full  lg:w-[60%] p-2">
+        <div className="flex justify-center items-center w-full  lg:w-[60%] p-2" data-aos="fade-left">
           <div className="flex flex-col justify-between w-full xl:ml-12 lg:px-8 xl:w-[70%]">
             <div className="flex flex-col items-center md:items-start">
               <h3 className="text-center flex items-center md:text-left text-[#0dff1c]  font-semibold text-2xl sm:text-3xl">
@@ -223,24 +231,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      {/* <div className="mt-12 text-[#0dff1c] bg-[#DFE4EF] flex justify-center items-center">
-        <div>
-          <h1 className="text-xl font-Roboto  tracking- leading-none">
-            Venue Partner :
-          </h1>
-        </div>
-        <p className="text-lg mt-[0.1rem] font font-Montserrat ml-2 ">
-          {" "}
-          August 5th @ Indian Institute of Technology, Delhi
-        </p>
-        <a
-          href="https://home.iitd.ac.in/"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          <img src={fitt} className="w-36 h-36" alt="" />
-        </a>
-      </div> */}
     </section>
   );
 };
