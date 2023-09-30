@@ -13,8 +13,8 @@ import "aos/dist/aos.css";
 const About = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: true, 
+      duration: 1000,
+      once: true,
     });
   }, []);
   const scrollToSection = (sectionId) => {
@@ -97,10 +97,10 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="pt-12 xl:pt-36">
+    <section id="about" className="pt-12 xl:pt-36" data-aos="fade-right">
       <div className=" flex flex-col-reverse px-4 lg:flex-row items-center justify-center w-full  mx-auto">
-        <div className="lg:w-[600px] md:w-[800px] mx-2 lg:pt-0 pt-10" data-aos="fade-right">
-          <div className="shadow-lg  rounded " >
+        <div className="lg:w-[600px] md:w-[800px] mx-2 lg:pt-0 pt-10">
+          <div className="shadow-lg  rounded ">
             <Carousel
               showThumbs={false}
               autoPlay={true}
@@ -168,7 +168,7 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <div className="flex justify-center items-center w-full  lg:w-[60%] p-2" data-aos="fade-left">
+        <div className="flex justify-center items-center w-full  lg:w-[60%] p-2">
           <div className="flex flex-col justify-between w-full xl:ml-12 lg:px-8 xl:w-[70%]">
             <div className="flex flex-col items-center md:items-start">
               <h3 className="text-center flex items-center md:text-left text-[#0dff1c]  font-semibold text-2xl sm:text-3xl">
