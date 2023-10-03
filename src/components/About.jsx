@@ -6,9 +6,18 @@ import register from "../assets/register.png";
 import schedule from "../assets/schedule.png";
 import submit from "../assets/submit.png";
 import imgData from "../data/imgData.json";
-import fitt from "../assets/fitt.png";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -16,6 +25,7 @@ const About = () => {
       setActiveSection(sectionId);
     }
   };
+
   const renderCustomPrevArrow = (onClickHandler, hasPrev, label) => {
     if (!hasPrev) {
       return null;
@@ -40,9 +50,9 @@ const About = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M15 19l-7-7 7-7"
               ></path>
             </svg>
@@ -76,9 +86,9 @@ const About = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M9 5l7 7-7 7"
               ></path>
             </svg>
@@ -89,7 +99,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="pt-12 xl:pt-36  ">
+    <section id="about" className="pt-12 xl:pt-36" data-aos="fade-right">
       <div className=" flex flex-col-reverse px-4 lg:flex-row items-center justify-center w-full  mx-auto">
         <div className="lg:w-[600px] md:w-[800px] mx-2 lg:pt-0 pt-10">
           <div className="shadow-lg  rounded ">
@@ -112,52 +122,7 @@ const About = () => {
             </Carousel>{" "}
           </div>
           <div className="w-full bg-[#000300] border border-gray-200 rounded-lg shadow ">
-            <ul
-              className="text-sm font-medium text-center  divide-x divide-gray-200 rounded-lg sm:flex "
-              id="fullWidthTab"
-              data-tabs-toggle="#fullWidthTabContent"
-              role="tablist"
-            >
-              <li className="w-full">
-                <button
-                  id="stats-tab"
-                  data-tabs-target="#stats"
-                  type="button"
-                  role="tab"
-                  aria-controls="stats"
-                  aria-selected="true"
-                  className="inline-block w-full p-4 h-full font-semibold rounded-tl-lg  hover: focus:outline-none"
-                >
-                  Date: 26th November
-                </button>
-              </li>
-              <li className="w-full">
-                <button
-                  id="about-tab"
-                  data-tabs-target="#about"
-                  type="button"
-                  role="tab"
-                  aria-controls="about"
-                  aria-selected="false"
-                  className="inline-block w-full p-4 h-full font-semibold  hover: focus:outline-none "
-                >
-                  Venue: Soon..
-                </button>
-              </li>
-              <li className="w-full">
-                <button
-                  id="faq-tab"
-                  data-tabs-target="#faq"
-                  type="button"
-                  role="tab"
-                  aria-controls="faq"
-                  aria-selected="false"
-                  className="inline-block w-full p-4 h-full rounded-tr-lg font-semibold  hover: focus:outline-none "
-                >
-                  Speakers: CFP Live, ends 20th October
-                </button>
-              </li>
-            </ul>
+            {/* Tab buttons code */}
           </div>
         </div>
         <div className="flex justify-center items-center w-full  lg:w-[60%] p-2">
@@ -170,15 +135,15 @@ const About = () => {
                 ABOUT THE CONFERENCE
               </h3>
               <p className="font-Roboto text-justify text-md sm:text-lg lg:text-xl pt-2 font-gray-800">
-                The FOSSCU Conference, organized annually by the FOSSCU
-                Community, stands as a testament to the unwavering dedication to
-                promoting open source technology and fostering collaboration
-                within the open-source community. This event provides a vibrant
-                and unifying platform that brings together programmers from
-                diverse backgrounds, including students taking their first steps
-                into the world of code, visionary entrepreneurs envisioning
-                innovative solutions, and seasoned professionals with a deep
-                commitment to open source principles.
+                Uniting Developers, Tech Enthusiasts, and Open-Source Advocates:
+                The Inaugural FOSSCU Conference Delhi
+              </p>
+              <p className="font-Roboto text-md sm:text-lg lg:text-xl pt-2 font-gray-800">
+                We are excited to bring together developers, tech enthusiasts,
+                and open-source advocates for the first-ever FOSSCU Conference
+                in Delhi. This one-day event is designed to be a melting pot of
+                innovation, learning, and collaboration in the realm of
+                open-source technology.
               </p>
               <p className=" font-Roboto text-md sm:text-lg lg:text-xl pt-2 font-gray-800 mt-4 mb-2">
                 We kindly request all participants to adhere to our Code of
@@ -223,24 +188,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      {/* <div className="mt-12 text-[#0dff1c] bg-[#DFE4EF] flex justify-center items-center">
-        <div>
-          <h1 className="text-xl font-Roboto  tracking- leading-none">
-            Venue Partner :
-          </h1>
-        </div>
-        <p className="text-lg mt-[0.1rem] font font-Montserrat ml-2 ">
-          {" "}
-          August 5th @ Indian Institute of Technology, Delhi
-        </p>
-        <a
-          href="https://home.iitd.ac.in/"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          <img src={fitt} className="w-36 h-36" alt="" />
-        </a>
-      </div> */}
     </section>
   );
 };

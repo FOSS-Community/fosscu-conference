@@ -52,7 +52,7 @@ const Community = () => {
               {" "}
               <a target="_blank" rel="noopener noreferrer">
                 <img
-                  className="text-gray-500 font-bold hover:bg-[#DFE4EF] p-3 h-40"
+                  className="text-gray-500 font-bold hover:bg-[#DFE4EF] p-3 h-40 md:w-40 w-32"
                   alt="Logo"
                 />
               </a>
@@ -63,7 +63,7 @@ const Community = () => {
               {" "}
               <a target="_blank" rel="noopener noreferrer">
                 <img
-                  className="text-gray-500 font-bold hover:bg-[#DFE4EF] p-3 h-40"
+                  className="text-gray-500 font-bold hover:bg-[#DFE4EF] p-3 h-40 md:w-40 w-32"
                   alt="Logo"
                 />
               </a>
@@ -74,7 +74,7 @@ const Community = () => {
               {" "}
               <a target="_blank" rel="noopener noreferrer">
                 <img
-                  className="text-gray-500 font-bold hover:bg-[#DFE4EF] p-3 h-40"
+                  className="text-gray-500 font-bold hover:bg-[#DFE4EF] p-3 h-40 md:w-40 w-32"
                   alt="Logo"
                 />
               </a>
@@ -85,7 +85,7 @@ const Community = () => {
               {" "}
               <a target="_blank" rel="noopener noreferrer">
                 <img
-                  className="text-gray-500 font-bold hover:bg-[#DFE4EF] p-3 h-40"
+                  className="text-gray-500 font-bold hover:bg-[#DFE4EF] p-3 h-40 md:w-40 w-32"
                   alt="Logo"
                 />
               </a>

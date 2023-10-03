@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <div
-      className="bg-[#000300] h-[94vh] flex items-center relative" 
+      className="bg-[#000300] h-[94vh] flex items-center relative"
       style={{
         backgroundImage: `url(${bgImg})`,
         backgroundSize: "cover",
@@ -42,7 +42,7 @@ const Hero = () => {
           {" "}
           {/* Centered content vertically */}
           <animated.div className="w-full  z-10 cursor-grab" style={fadeIn}>
-            <h1 className="text-3xl sm:text-6xl md:text-7xl font-Montserrat font-extrabold tracking-tight leading-none mb-4 text-black">
+            <h1 className="text-3xl sm:text-6xl md:text-7xl font-Montserrat font-extrabold tracking-tight leading-none mb-4 text-gray-900 ">
               <span className="bubble-animation">
                 <animated.span className="bubble-animation-up">F</animated.span>
                 <animated.span className="bubble-animation-down">
@@ -59,7 +59,7 @@ const Hero = () => {
               </span>
               <span> CONFERENCE 2023</span> {/* Added conference year */}
             </h1>
-            <p className="text-xl sm:text-2xl font-Montserrat font-semibold  text-black tracking-wider ">
+            <p className="text-xl sm:text-2xl font-Montserrat font-bold text-gray-900 tracking-wider ">
               EXPLORING THE WORLD OF OPEN SOURCE: JOIN OUR CONFERENCE TODAY!
             </p>
           </animated.div>
@@ -69,7 +69,7 @@ const Hero = () => {
           >
             {" "}
             {/* Centered and added margin for scroll-down indicator */}
-            <FaChevronDown className="text-black  text-4xl animate-bounce" />
+            <FaChevronDown className="text-gray-900 text-4xl animate-bounce" />
           </div>
           <div className="w-full absolute bottom-0 right-0 left-0 text-center">
             {" "}
