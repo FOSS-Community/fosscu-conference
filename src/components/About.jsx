@@ -25,6 +25,7 @@ const About = () => {
       setActiveSection(sectionId);
     }
   };
+
   const renderCustomPrevArrow = (onClickHandler, hasPrev, label) => {
     if (!hasPrev) {
       return null;
@@ -49,9 +50,9 @@ const About = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M15 19l-7-7 7-7"
               ></path>
             </svg>
@@ -85,9 +86,9 @@ const About = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M9 5l7 7-7 7"
               ></path>
             </svg>
@@ -121,52 +122,7 @@ const About = () => {
             </Carousel>{" "}
           </div>
           <div className="w-full bg-[#000300] border border-gray-200 rounded-lg shadow ">
-            <ul
-              className="text-sm font-medium text-center  divide-x divide-gray-200 rounded-lg sm:flex "
-              id="fullWidthTab"
-              data-tabs-toggle="#fullWidthTabContent"
-              role="tablist"
-            >
-              <li className="w-full">
-                <button
-                  id="stats-tab"
-                  data-tabs-target="#stats"
-                  type="button"
-                  role="tab"
-                  aria-controls="stats"
-                  aria-selected="true"
-                  className="inline-block w-full p-4 h-full font-semibold rounded-tl-lg  hover: focus:outline-none"
-                >
-                  Date: 26th November
-                </button>
-              </li>
-              <li className="w-full">
-                <button
-                  id="about-tab"
-                  data-tabs-target="#about"
-                  type="button"
-                  role="tab"
-                  aria-controls="about"
-                  aria-selected="false"
-                  className="inline-block w-full p-4 h-full font-semibold  hover: focus:outline-none "
-                >
-                  Venue: Soon..
-                </button>
-              </li>
-              <li className="w-full">
-                <button
-                  id="faq-tab"
-                  data-tabs-target="#faq"
-                  type="button"
-                  role="tab"
-                  aria-controls="faq"
-                  aria-selected="false"
-                  className="inline-block w-full p-4 h-full rounded-tr-lg font-semibold  hover: focus:outline-none "
-                >
-                  Speakers: CFP Live, ends 20th October
-                </button>
-              </li>
-            </ul>
+            {/* Tab buttons code */}
           </div>
         </div>
         <div className="flex justify-center items-center w-full  lg:w-[60%] p-2">
@@ -179,15 +135,15 @@ const About = () => {
                 ABOUT THE CONFERENCE
               </h3>
               <p className="font-Roboto text-justify text-md sm:text-lg lg:text-xl pt-2 font-gray-800">
-                The FOSSCU Conference, organized annually by the FOSSCU
-                Community, stands as a testament to the unwavering dedication to
-                promoting open source technology and fostering collaboration
-                within the open-source community. This event provides a vibrant
-                and unifying platform that brings together programmers from
-                diverse backgrounds, including students taking their first steps
-                into the world of code, visionary entrepreneurs envisioning
-                innovative solutions, and seasoned professionals with a deep
-                commitment to open source principles.
+                Uniting Developers, Tech Enthusiasts, and Open-Source Advocates:
+                The Inaugural FOSSCU Conference Delhi
+              </p>
+              <p className="font-Roboto text-md sm:text-lg lg:text-xl pt-2 font-gray-800">
+                We are excited to bring together developers, tech enthusiasts,
+                and open-source advocates for the first-ever FOSSCU Conference
+                in Delhi. This one-day event is designed to be a melting pot of
+                innovation, learning, and collaboration in the realm of
+                open-source technology.
               </p>
               <p className=" font-Roboto text-md sm:text-lg lg:text-xl pt-2 font-gray-800 mt-4 mb-2">
                 We kindly request all participants to adhere to our Code of
