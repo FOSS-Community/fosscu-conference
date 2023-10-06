@@ -65,4 +65,31 @@ body {
   }
 }
 
+/* Add this CSS to your stylesheet */
+.glowing-line {
+  position: relative;
+  display: inline-block;
+}
+
+.glowing-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Adjust the space between heading and line as needed */
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the line as needed */
+  background: linear-gradient(45deg, #404b40, #00ffff, #0dff1c); /* Adjust colors as needed */
+  background-size: 200% 200%;
+  animation: glowing 3s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -200% -200%;
+  }
+}
+
 
