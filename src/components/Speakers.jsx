@@ -25,7 +25,7 @@ const Speakers = () => {
       title: "SDE @Samagra",
       image: TusharGupta,
       description:
-        "Senior-year undergrad, GitHub Campus Expert, tech enthusiast, hackathon winner, open-source contributor.",
+        "SDE at Samagra, GitHub Campus Ambassador, MLH Fellow for Fall'22, and Summer Fellow'22 at Processing Foundation.",
     },
   ];
 
@@ -80,7 +80,7 @@ const Speakers = () => {
                 <motion.img
                   src={speaker.image || nikita}
                   alt={speaker.name}
-                  className="mx-auto mb-4"
+                  className="mx-auto mb-4 w-[28rem]"
                 />
               </div>
               <h3 className="text-white text-xl font-semibold mb-2">
