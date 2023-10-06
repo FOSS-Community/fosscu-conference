@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import nikita from "../assets/nikita.jpg";
-import tushar from "../assets/Tushar.jpeg";
 import Tushar from "../assets/tushar.jpg";
+import TusharGupta from "../assets/TusharGupta.jpg";
 
 const Speakers = () => {
   const speakersData = [
@@ -10,19 +10,23 @@ const Speakers = () => {
       name: "Nikita Sobolev ( Никита Соболев )",
       title: "CTO, wemake.services",
       image: nikita,
-      isKeynote: true,
       description:
         "Nikita Sobolev, a versatile CTO, mentor, and advocate for open source, with a passion for spreading knowledge and organizing conferences",
     },
-
     {
-      name: "Tushar Gupta",
+      name: "Tushar Sadhwani",
       title: "SDE II at DeepSource",
       image: Tushar,
       description:
         "Long term Python developer, author, technical reviewer and speaker. Writing static analysis tools @ DeepSource.",
     },
-   
+    {
+      name: "Tushar Gupta",
+      title: "SDE @Samagra",
+      image: TusharGupta,
+      description:
+        "Senior-year undergrad, GitHub Campus Expert, tech enthusiast, hackathon winner, open-source contributor.",
+    },
   ];
 
   const sectionAnimation = {
@@ -32,7 +36,7 @@ const Speakers = () => {
   };
 
   const speakerAnimation = {
-    initial: { scale: 1 }, // Changed initial scale to 1 (no scaling on load)
+    initial: { scale: 1 },
     hover: { scale: 1.05 },
     transition: { duration: 0.3 },
   };
