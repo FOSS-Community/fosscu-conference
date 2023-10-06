@@ -11,6 +11,7 @@ import Community from "../components/Community";
 import Schedule from "../components/Schedule";
 import Register from "../components/Register";
 import  { useState } from "react";
+import Speakers from "../components/Speakers";
 
 
 const Homepage = () => {
@@ -28,6 +29,7 @@ const Homepage = () => {
       <Hero  />
       <About />
       <Schedule />
+      <Speakers />
       <Faq 
        data={faqData} 
       />
