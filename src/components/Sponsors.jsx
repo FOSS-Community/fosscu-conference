@@ -21,7 +21,7 @@ const Sponsors = () => {
           <span className="font-semibold  text-[#5DB363]">
             <a
             target="blank"
-              href=""
+              href="/Sponsorship_Prospectus.pdf"
               className="hover:text-green-500"
             >
               {" "}
