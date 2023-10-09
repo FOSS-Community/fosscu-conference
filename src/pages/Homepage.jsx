@@ -7,7 +7,6 @@ import About from "../components/About";
 import Faq from "../components/Faq";
 import faqData from "../data/faqData.json";
 import Code from "../components/Code";
-import Community from "../components/Community";
 import Schedule from "../components/Schedule";
 import Register from "../components/Register";
 import  { useState } from "react";
@@ -39,7 +38,6 @@ const Homepage = () => {
        longCoc={longCoc}
        handleLongCoc={handleLongCoc}
       />
-      <Community />
       <Sponsors />
       <Register />
       <Footer />
