@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import nikita from "../assets/nikita.jpg";
 import Tushar from "../assets/tushar.jpg";
 import TusharGupta from "../assets/TusharGupta.jpg";
+// import Divya from "../assets/Divya.jpg";
+import Jatin from "../assets/Jatin.jpg";
 
 const Speakers = () => {
   const speakersData = [
@@ -26,6 +28,20 @@ const Speakers = () => {
       image: TusharGupta,
       description:
         "SDE at Samagra, GitHub Campus Ambassador, MLH Fellow for Fall'22, and Summer Fellow'22 at Processing Foundation.",
+    },
+    // {
+    //   name: "Divya Mohan",
+    //   title: "Open Source Cat Herder",
+    //   image: Divya,
+    //   description:
+    //     "SUSE Senior Tech Evangelist, Women Who Code's Top 100 Technologists to Watch, Kubernetes docs maintainer, CNCF Ambassador",
+    // },
+    {
+      name: "Jatin K Malik",
+      title: "Principle Software Engineer @Atlassian",
+      image: Jatin,
+      description:
+        "Previous Positions Software Architect at Uber, Lead Software Engineer at Uber, SDE III at Synaptic, SDE II at Shuttl and SDE at Adobe.",
     },
   ];
 
