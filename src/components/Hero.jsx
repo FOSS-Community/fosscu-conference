@@ -19,9 +19,9 @@ const Hero = () => {
 
   return (
     <div
-      className="bg-[#000300] h-[94vh] flex items-center relative"
+      className="bg-[#000300] h-screen flex items-center relative"
       style={{
-        backgroundImage: `url(${gif})`,
+        backgroundImage: `url(${gif})`, 
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

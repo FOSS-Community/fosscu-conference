@@ -47,11 +47,12 @@ const Navbar = () => {
 
   return (
     <>
-      <div
-        className={`sticky z-20 top-0 w-[100%] bg-[#000300] ${
-          isSticky ? "shadow-lg  " : ""
-        }`}
-      >
+      {isSticky && ( // Render the navbar only when isSticky is true
+        <div
+          className={`sticky z-20 top-0 w-[100%] bg-opacity-70 backdrop-blur-md border-b border-gray-700 ${
+            isSticky ? "shadow-lg" : ""
+          }`}
+        >
         <div className="flex justify-between items-center h-[4.8rem] max-w-[1240px] mx-auto px-4 ">
           <a href="#" className="flex justify-center items-center">
             <img src={logo} className="w-14" alt="" />
@@ -236,7 +237,8 @@ Keynotes        </li>
             </ul>
           </div>
         </div>
-      </div>
+        </div>
+      )}
     </>
   );
 };
