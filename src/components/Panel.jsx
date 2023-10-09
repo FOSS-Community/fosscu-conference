@@ -32,7 +32,7 @@ const Panel = () => {
         twitter: "https://twitter.com/shreyacasmalert",
       },
       {
-        name: "Shreya Prasad",
+        name: "Swastika Yadav",
         title: "Developer Advocate @Rig_dev",
         description:
           "Prev: @tursodatabase | Tweeting about Javascript, Web Development, Communities, Remote jobs, Travel",
