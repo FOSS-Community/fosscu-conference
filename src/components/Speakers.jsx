@@ -61,10 +61,11 @@ const Speakers = () => {
 
   return (
     <motion.section
-      className="bg-gradient-to-b pb-24 from-gray-800 via-gray-700 to-gray-900 py-16"
+      className="bg-gradient-to-b pb-36 from-gray-800 via-gray-700 to-gray-900 pt-32"
       variants={sectionAnimation}
       initial="initial"
       animate="animate"
+      id="speaker"
     >
       <div className="container mx-auto text-center">
         <h2
