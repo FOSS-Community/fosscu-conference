@@ -11,6 +11,7 @@ import Schedule from "../components/Schedule";
 import Register from "../components/Register";
 import  { useState } from "react";
 import Speakers from "../components/Speakers";
+import Panel from "../components/Panel";
 
 
 const Homepage = () => {
@@ -32,6 +33,7 @@ const Homepage = () => {
       <Faq 
        data={faqData} 
       />
+      <Panel /> 
       <Code 
        handleShortCoc={handleShortCoc} 
        shortCoc={shortCoc} 
