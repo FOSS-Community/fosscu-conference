@@ -30,10 +30,10 @@ const Homepage = () => {
       <About />
       <Schedule />
       <Speakers />
+      <Panel /> 
       <Faq 
        data={faqData} 
       />
-      <Panel /> 
       <Code 
        handleShortCoc={handleShortCoc} 
        shortCoc={shortCoc} 
