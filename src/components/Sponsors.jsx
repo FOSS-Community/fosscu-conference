@@ -30,7 +30,7 @@ const Sponsors = () => {
           </span>{" "}
         </p>
       </div>
-      <div className="mt-6 flex gap-4 max-w-8xl px-8 justify-center m-auto">
+      {/* <div className="mt-6 flex gap-4 max-w-8xl px-8 justify-center m-auto">
         <div className="sponsor-container">
           <div className="sponsor-image-container">
             <img className="" src={yourlogo} alt="Logo" />
@@ -46,7 +46,7 @@ const Sponsors = () => {
             <img className="" src={yourlogo} alt="Logo" />
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
