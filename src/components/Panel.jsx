@@ -18,7 +18,7 @@ const Panel = () => {
   const [hoveredSpeakers, setHoveredSpeakers] = useState([]);
 
   const panelData = {
-    title: "INNOVATING LIKE ADA: WOMEN IN TECH BREAKTHROUGHS",
+    title: "Breaking Barriers: Women Redefining Tech",
     description:
       "Join us for an inspiring panel discussion on the incredible breakthroughs and innovations made by women in the tech industry. Our esteemed panelists will share their experiences, insights, and success stories.",
     speakers: [
