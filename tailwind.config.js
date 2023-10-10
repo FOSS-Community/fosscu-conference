@@ -4,10 +4,14 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backdropFilter: {
+        'blur': 'blur(5px)'
+      }
+    },
     fontFamily: {
       Montserrat: ['Montserrat', 'sans-serif'],
-      Roboto: ['Roboto', 'Arial', 'sans-serif'],
+      Roboto: ['Roboto', 'Arial', 'sans-serif', 'Roboto-mono'],
     },
   },
   plugins: [
