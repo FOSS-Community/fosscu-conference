@@ -5,6 +5,7 @@
 body {
   background-color: #000300;
   color: #f9f6ee;
+  overflow-x: hidden;
 }
 
 @layer components {
